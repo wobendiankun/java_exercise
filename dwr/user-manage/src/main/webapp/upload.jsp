@@ -4,25 +4,21 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<title>user delete</title>
+<title>文件上传</title>
 <script type="text/javascript" src="<%=request.getContextPath()%>/dwr/engine.js"></script>
 <script type="text/javascript" src="<%=request.getContextPath()%>/dwr/util.js"></script>
-<script type="text/javascript" src="<%=request.getContextPath()%>/dwr/interface/UserService.js"></script>
+<script type="text/javascript" src="<%=request.getContextPath()%>/dwr/interface/FileService.js"></script>
 <script type="text/javascript">
-	UserService.deleted(11,{
-		//回调函数  
-		callback:callBack,
-		  //异常处理
-		  errorHandler:function(msg) {
-			  alert(msg);
-		  }
-	});
-	function callBack(result){
-		alert(result);
+	function upload(){
+		var file=dwr.util.getValue("file");
+		FileService.upload(file,file.value,function(result){
+			alert(result);
+		});
 	}
 </script>
 </head>
 <body>
-
+附件:<input type="file" id="file" name="file"><br/>
+<button onclick="upload();">上传</button>
 </body>
 </html>

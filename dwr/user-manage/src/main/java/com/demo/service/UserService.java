@@ -12,8 +12,7 @@ public class UserService {
 		return SUCCESS;
 	}
 	public String deleted(int userId){
-		System.out.println("userId:"+userId);
-		return SUCCESS;
+		throw new RuntimeException("删除出错了...");
 	}
 	public String update(User user){
 		System.out.println("update:"+user);

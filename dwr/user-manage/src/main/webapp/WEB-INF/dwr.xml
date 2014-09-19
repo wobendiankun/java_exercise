@@ -6,8 +6,14 @@
     <create creator="new">
       <param name="class" value="com.demo.service.UserService"/>
     </create>
+    <create creator="new">
+      <param name="class" value="com.demo.service.FileService"/>
+    </create>
     <!-- 配置转换器 -->
 	<convert converter="bean" match="com.demo.model.User"/>
+	<!-- 异常转换 -->
+	<convert match="java.lang.Exception" converter="exception"/>
+  	<convert match="java.lang.StackTraceElement" converter="bean"/>
   </allow>
 
 </dwr>
