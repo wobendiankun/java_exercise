@@ -3,7 +3,7 @@
 	"http://hibernate.sourceforge.net/hibernate-configuration-3.0.dtd">
 
 <hibernate-configuration>
-	<session-factory name="foo">
+	<session-factory >
 		<!-- 显示sql -->
 		<property name="show_sql">true</property>
 		<property name="hibernate.connection.driver_class">oracle.jdbc.driver.OracleDriver</property>
@@ -13,7 +13,7 @@
 		<!-- 生成sql语句采用的语法 -->
 		<property name="hibernate.dialect">org.hibernate.dialect.Oracle10gDialect</property>
 		<!-- 自动创建表结构 -->
-		<property name="hibernate.hbm2ddl.auto">create</property>
+		<property name="hibernate.hbm2ddl.auto">update</property>
 		<!-- bean与表的映射 -->
 		<mapping resource="com/demo/model/Student.hbm.xml"/>
 	</session-factory>
