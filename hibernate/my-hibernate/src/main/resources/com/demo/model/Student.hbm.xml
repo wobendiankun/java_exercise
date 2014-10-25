@@ -5,11 +5,13 @@
 
 <hibernate-mapping package="com.demo.model">
 
-    <class name="Student" table="t_student">
-        <id name="studentId" column="student_id">
-            <generator class="sequence"/>
-        </id>
-        <property name="studentName" column="student_name"/>
-        <property name="age" />
-    </class>
+	<class name="Student" table="t_student">
+		<id name="studentId" column="student_id">
+			<generator class="sequence">
+				<param name="sequence">SEQ_T_STUDENT</param>
+			</generator>
+		</id>
+		<property name="studentName" column="student_name" />
+		<property name="age" />
+	</class>
 </hibernate-mapping>

@@ -2,7 +2,7 @@ package com.demo.model;
 
 import java.io.UnsupportedEncodingException;
 
-/**学生实体类
+/**学生信息双向
  * @author wobendiankun
  *2014-10-19 下午08:54:29
  */
@@ -38,7 +38,6 @@ public class Student {
 				e.printStackTrace();
 			}
 		}
-		
 		return "Student [studentId=" + studentId + ", studentName="
 				+ str + ", age=" + age + "]";
 	}
