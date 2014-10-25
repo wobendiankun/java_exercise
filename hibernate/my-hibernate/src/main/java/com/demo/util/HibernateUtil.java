@@ -4,6 +4,10 @@ import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.hibernate.cfg.Configuration;
 
+/**
+ * @author wobendiankun
+ *2014-10-24 下午10:01:33
+ */
 public class HibernateUtil {
 	private static  SessionFactory sessionFactory=getInstance();
 	private static SessionFactory getInstance(){
