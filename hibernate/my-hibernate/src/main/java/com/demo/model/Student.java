@@ -1,8 +1,9 @@
 package com.demo.model;
 
 import java.io.UnsupportedEncodingException;
+import java.util.Set;
 
-/**学生信息双向
+/**学生信息
  * @author wobendiankun
  *2014-10-19 下午08:54:29
  */
@@ -10,6 +11,7 @@ public class Student {
 	private int studentId ;
 	private String studentName ;
 	private int age;
+	private Set<Certificate> certificates ;
 	public int getStudentId() {
 		return studentId;
 	}
@@ -40,6 +42,12 @@ public class Student {
 		}
 		return "Student [studentId=" + studentId + ", studentName="
 				+ str + ", age=" + age + "]";
+	}
+	public Set<Certificate> getCertificates() {
+		return certificates;
+	}
+	public void setCertificates(Set<Certificate> certificates) {
+		this.certificates = certificates;
 	}
 	
 }

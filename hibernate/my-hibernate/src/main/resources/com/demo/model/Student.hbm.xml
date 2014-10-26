@@ -3,9 +3,9 @@
         "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
         "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
 
-<hibernate-mapping package="com.demo.model">
+<hibernate-mapping >
 
-	<class name="Student" table="t_student">
+	<class name="com.demo.model.Student" table="t_student">
 		<id name="studentId" column="student_id">
 			<generator class="sequence">
 				<param name="sequence">SEQ_T_STUDENT</param>
@@ -13,5 +13,10 @@
 		</id>
 		<property name="studentName" column="student_name" />
 		<property name="age" />
+		
+		<set name="certificates" lazy="extra"><!-- lazy="extra" -->
+			<key column="student_id"></key>
+			<one-to-many class="com.demo.model.Certificate"/>
+		</set>
 	</class>
 </hibernate-mapping>

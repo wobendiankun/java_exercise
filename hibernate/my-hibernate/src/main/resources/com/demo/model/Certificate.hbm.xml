@@ -3,14 +3,14 @@
         "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
         "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
 
-<hibernate-mapping package="com.demo.model">
+<hibernate-mapping >
 
-    <class name="Certificate" table="t_certificate">
+    <class name="com.demo.model.Certificate" table="t_certificate">
         <id name="certificateId" column="certificate_id">
             <generator class="sequence"><param name="sequence">SEQ_T_CERTIFICATE</param></generator>
         </id>
         <property name="certificateName" column="certificate_name"/>
         <property name="certificateNo" column="certificate_no"/>
-        <many-to-one name="student" column="student_id"></many-to-one>
+        <!-- <many-to-one name="student" column="student_id"></many-to-one> -->
     </class>
 </hibernate-mapping>
