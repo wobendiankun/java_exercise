@@ -8,7 +8,7 @@
 		<dependency>
 			<groupId>org.hibernate</groupId>
 			<artifactId>hibernate-core</artifactId>
-			<version>3.6.10.Final</version>
+			<version>3.6.0.Final</version>
 		</dependency>
 		<dependency>
 			<groupId>org.hibernate.javax.persistence</groupId>
@@ -36,6 +36,7 @@
 			<version>4.10</version>
 		</dependency>
 		<dependency>
+			<!-- 自己手动添加到maven本地仓库 -->
 			<groupId>oracle</groupId>
 			<artifactId>ojdbc</artifactId>
 			<version>14</version>

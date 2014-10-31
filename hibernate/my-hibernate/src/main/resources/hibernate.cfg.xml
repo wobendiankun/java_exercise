@@ -18,5 +18,6 @@
 		<!-- bean与表的映射 -->
 		<mapping resource="com/demo/model/Student.hbm.xml"/>
 		<mapping resource="com/demo/model/Certificate.hbm.xml"/>
+		<mapping resource="com/demo/model/User.hbm.xml"/>
 	</session-factory>
 </hibernate-configuration>
