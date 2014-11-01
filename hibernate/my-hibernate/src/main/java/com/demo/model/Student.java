@@ -12,6 +12,7 @@ public class Student {
 	private String studentName ;
 	private int age;
 	private Set<Certificate> certificates ;
+	private User user;
 	public int getStudentId() {
 		return studentId;
 	}
@@ -48,6 +49,12 @@ public class Student {
 	}
 	public void setCertificates(Set<Certificate> certificates) {
 		this.certificates = certificates;
+	}
+	public User getUser() {
+		return user;
+	}
+	public void setUser(User user) {
+		this.user = user;
 	}
 	
 }
