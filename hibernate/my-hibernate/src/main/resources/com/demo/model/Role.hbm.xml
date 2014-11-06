@@ -12,9 +12,9 @@
 			</generator>
 		</id>
 		<property name="roleName" column="role_name" />
-		<set name="users" table="t_user_role" lazy="extra">
+		<!-- <set name="users" table="t_user_role" lazy="extra">
 			<key column="role_id"></key>
 			<many-to-many class="com.demo.model.User" column="user_id"></many-to-many>
-		</set>
+		</set> -->
 	</class>
 </hibernate-mapping>

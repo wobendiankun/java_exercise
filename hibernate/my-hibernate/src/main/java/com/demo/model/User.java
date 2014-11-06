@@ -21,7 +21,7 @@ public class User {
 	private String password;
 	
 	private Student student ;
-	private Set<Role> roles; 
+	//private Set<Role> roles; 
 	
 	public User() {
 	}
@@ -64,13 +64,13 @@ public class User {
 	}
 
 
-	public Set<Role> getRoles() {
+	/*public Set<Role> getRoles() {
 		return roles;
 	}
 
 
 	public void setRoles(Set<Role> roles) {
 		this.roles = roles;
-	}
+	}*/
 	
 }

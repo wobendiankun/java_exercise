@@ -15,7 +15,7 @@ public class Role {
 	 * 角色名称
 	 */
 	private String roleName;
-	private Set<User> users;
+	//private Set<User> users;
 	
 	public Role() {
 	}
@@ -41,11 +41,11 @@ public class Role {
 	public void setRoleName(String roleName) {
 		this.roleName = roleName;
 	}
-	public Set<User> getUsers() {
+	/*public Set<User> getUsers() {
 		return users;
 	}
 	public void setUsers(Set<User> users) {
 		this.users = users;
-	}
+	}*/
 	
 }

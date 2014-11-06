@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+        "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+        "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping >
+
+	<class name="com.demo.model.UserRole" table="t_user_role">
+		<id name="userRoleId" column="user_role_id">
+			<generator class="sequence">
+				<param name="sequence">SQE_T_USER_ROLE</param>
+			</generator>
+		</id>
+		<property name="operator"/>
+		<many-to-one name="user" column="user_id"></many-to-one>
+		<many-to-one name="role" column="role_id"></many-to-one>
+	</class>
+</hibernate-mapping>

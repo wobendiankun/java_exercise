@@ -22,7 +22,7 @@ public class Many2ManySingleTest {
 		users.add(user2);
 		
 		Role role=new Role("开发组");
-		role.setUsers(users);
+		//role.setUsers(users);
 		Session session = null;
 		try {
 			session = HibernateUtil.openSession();
@@ -46,7 +46,7 @@ public class Many2ManySingleTest {
 			session.beginTransaction();
 			Role role=(Role)session.load(Role.class,2);
 			System.out.println("角色名称"+role.getRoleName());
-			System.out.println("users:"+role.getUsers());
+			//System.out.println("users:"+role.getUsers());
 			session.getTransaction().commit();
 		} catch (Exception e) {
 			session.getTransaction().rollback();

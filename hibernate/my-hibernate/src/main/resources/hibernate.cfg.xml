@@ -20,5 +20,6 @@
 		<mapping resource="com/demo/model/Certificate.hbm.xml"/>
 		<mapping resource="com/demo/model/User.hbm.xml"/>
 		<mapping resource="com/demo/model/Role.hbm.xml"/>
+		<mapping resource="com/demo/model/UserRole.hbm.xml"/>
 	</session-factory>
 </hibernate-configuration>

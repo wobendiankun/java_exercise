@@ -15,7 +15,7 @@ import com.demo.util.HibernateUtil;
 public class Many2ManyDuplexTest {
 	@Test
 	public void addTest(){
-		User user1=new User("赵三","111");
+		/*User user1=new User("赵三","111");
 		User user2=new User("无四","111");
 		Set<User> users=new HashSet<User>();
 		users.add(user1);
@@ -40,11 +40,11 @@ public class Many2ManyDuplexTest {
 			e.printStackTrace();
 		} finally {
 			HibernateUtil.closeSession(session);
-		}
+		}*/
 	}
 	@Test
 	public void loadTest(){
-		Session session = null;
+		/*Session session = null;
 		try {
 			session = HibernateUtil.openSession();
 			session.beginTransaction();
@@ -57,6 +57,6 @@ public class Many2ManyDuplexTest {
 			e.printStackTrace();
 		} finally {
 			HibernateUtil.closeSession(session);
-		}
+		}*/
 	}
 }
