@@ -19,5 +19,6 @@
 		<mapping resource="com/demo/model/Student.hbm.xml"/>
 		<mapping resource="com/demo/model/Certificate.hbm.xml"/>
 		<mapping resource="com/demo/model/User.hbm.xml"/>
+		<mapping resource="com/demo/model/Role.hbm.xml"/>
 	</session-factory>
 </hibernate-configuration>

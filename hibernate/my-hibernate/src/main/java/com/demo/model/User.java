@@ -1,5 +1,7 @@
 package com.demo.model;
 
+import java.util.Set;
+
 /**用户信息
  * @author wobendiankun
  *2014-10-29 下午11:05:26
@@ -19,8 +21,23 @@ public class User {
 	private String password;
 	
 	private Student student ;
+	private Set<Role> roles; 
+	
+	public User() {
+	}
 	
 	
+	public User(int userId) {
+		this.userId = userId;
+	}
+	
+
+	public User(String userName, String password) {
+		this.userName = userName;
+		this.password = password;
+	}
+
+
 	public int getUserId() {
 		return userId;
 	}
@@ -44,6 +61,16 @@ public class User {
 	}
 	public void setStudent(Student student) {
 		this.student = student;
+	}
+
+
+	public Set<Role> getRoles() {
+		return roles;
+	}
+
+
+	public void setRoles(Set<Role> roles) {
+		this.roles = roles;
 	}
 	
 }

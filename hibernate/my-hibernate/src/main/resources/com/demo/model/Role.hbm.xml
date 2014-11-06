@@ -1,0 +1,20 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+        "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+        "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping >
+
+	<class name="com.demo.model.Role" table="t_role">
+		<id name="roleId" column="role_id">
+			<generator class="sequence">
+				<param name="sequence">SEQ_T_ROLE</param>
+			</generator>
+		</id>
+		<property name="roleName" column="role_name" />
+		<set name="users" table="t_user_role" lazy="extra">
+			<key column="role_id"></key>
+			<many-to-many class="com.demo.model.User" column="user_id"></many-to-many>
+		</set>
+	</class>
+</hibernate-mapping>

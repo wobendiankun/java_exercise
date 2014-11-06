@@ -61,4 +61,21 @@ public class One2OneDupleTest {
 			HibernateUtil.closeSession(session);
 		}
 	}
+	@Test
+	public void loadTest(){
+		Session session = null;
+		try {
+			session = HibernateUtil.openSession();
+			session.beginTransaction();
+			User user=(User)session.load(User.class,21);
+			System.out.println("login:"+user.getUserName());
+			System.out.println("student:"+user.getStudent().getStudentName());
+			session.getTransaction().commit();
+		} catch (Exception e) {
+			session.getTransaction().rollback();
+			e.printStackTrace();
+		} finally {
+			HibernateUtil.closeSession(session);
+		}
+	}
 }
